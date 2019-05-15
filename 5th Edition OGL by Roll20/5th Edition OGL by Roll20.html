@@ -9371,8 +9371,7 @@
                     final_init = final_init + parseInt(v["initmod"], 10);
                 }
                 if (v["init_tiebreaker"] && v["init_tiebreaker"] != 0) {
-                    const tiebreaker = `${final_init}${(parseInt(v["dexterity"], 10)/100).toString().slice(1)}`;
-                    final_init = parseFloat(tiebreaker);
+                    final_init = final_init + (parseInt(v["dexterity"], 10)/100);
                 }
                 if (v["jack_of_all_trades"] && v["jack_of_all_trades"] != 0) {
                     if(v["pb_type"] && v["pb_type"] === "die" && v["jack"]) {
